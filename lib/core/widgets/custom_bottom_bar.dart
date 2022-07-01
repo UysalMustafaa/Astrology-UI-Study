@@ -5,9 +5,8 @@ class CustomBottomBar extends StatelessWidget {
   final void Function(int val) onTap;
   final int currentIndex;
 
-  const CustomBottomBar(
-      {Key key, @required this.items, this.onTap, @required this.currentIndex})
-      : super(key: key);
+  const CustomBottomBar({this.items, @required this.onTap, this.currentIndex})
+      : super();
   @override
   Widget build(BuildContext context) {
     return Row(
