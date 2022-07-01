@@ -11,15 +11,14 @@ class CustomPageScaffold extends StatelessWidget {
   final bool hasButton;
 
   const CustomPageScaffold(
-      {Key key,
-      this.onBackPressed,
+      {this.onBackPressed,
       this.title,
       this.body,
       this.pageColor,
       this.buttonTitle,
       this.hasButton = true,
       this.onButtonPressed})
-      : super(key: key);
+      : super();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

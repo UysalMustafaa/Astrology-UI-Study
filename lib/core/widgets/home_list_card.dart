@@ -9,13 +9,8 @@ class HomeListCard extends StatelessWidget {
   final void Function() onPress;
 
   const HomeListCard(
-      {Key key,
-      this.title,
-      this.description,
-      this.icon,
-      this.color,
-      this.onPress})
-      : super(key: key);
+      {this.title, this.description, this.icon, this.color, this.onPress})
+      : super();
 
   @override
   Widget build(BuildContext context) {

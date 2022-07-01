@@ -1,3 +1,4 @@
+import 'package:astrology/core/constants/color_constants.dart';
 import 'package:astrology/core/widgets/custom_page_scaffold.dart';
 import 'package:astrology/pages/music/music_second.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ class MusicsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorConstants.OuterSpace,
       body: CustomPageScaffold(
         title: 'Şarkılara Sor',
         buttonTitle: 'Şarkılara Sor',
@@ -25,7 +27,7 @@ class MusicsPage extends StatelessWidget {
             ),
           );
         },
-        pageColor: Color.fromRGBO(160, 91, 248, 1),
+        pageColor: ColorConstants.JazzBerryJam,
       ),
     );
   }
