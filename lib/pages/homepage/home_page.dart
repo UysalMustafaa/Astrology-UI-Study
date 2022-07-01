@@ -1,12 +1,12 @@
+import 'package:astrology/core/constants/color_constants.dart';
 import 'package:astrology/core/widgets/custom_bottom_bar.dart';
 import 'package:astrology/core/widgets/home_list_card.dart';
 import 'package:astrology/pages/question/question_page.dart';
+import 'package:astrology/core/extensions/context_extension.dart';
 import 'package:astrology/pages/sky/sky_page.dart';
-
 import 'package:flutter/material.dart';
-
-import '../card_pick/card_pick_page.dart';
-import '../music/musics_page.dart';
+import 'package:astrology/pages/card_pick/card_pick_page.dart';
+import 'package:astrology/pages/music/musics_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff2C3639),
+      backgroundColor: ColorConstants.OuterSpace,
       bottomNavigationBar: CustomBottomBar(
         currentIndex: _currentTab,
         onTap: (int val) {
@@ -44,27 +44,19 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(16.0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
+                children: [
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        /* Text(
-                          'Cebimdeki',
-                          style: TextStyle(
-                            color: Color(0xFFD3EBCD),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 28,
-                          ),
-                        ),*/
-                        /*  Text(
+                        Text(
+                          'Zihnimdeki',
+                          style: context.appTheme().homePageHeaderTextStyle,
+                        ),
+                        Text(
                           'Cevaplar',
-                          style: TextStyle(
-                            color: Color.fromRGBO(69, 107, 255, 1),
-                            fontWeight: FontWeight.w900,
-                            fontSize: 28,
-                          ),
-                        )*/
+                          style: context.appTheme().homePageHeaderTextStyle,
+                        )
                       ],
                     ),
                   ),
@@ -89,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                     description:
                         'Bilmek istediğin sorunun cevabı belki de sorularda yatıyor.',
                     icon: Icons.zoom_out_map,
-                    color: Color.fromRGBO(254, 87, 65, 1),
+                    color: ColorConstants.RedBerry,
                     onPress: () {
                       Navigator.push(
                         context,
@@ -100,14 +92,14 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   SizedBox(
-                    height: 20,
+                    height: context.dynamicHeight(0.03),
                   ),
                   HomeListCard(
                     title: 'Kart Seç',
                     description:
                         'Bilmek istediğin sorunun cevabı belki de kartlarda yatıyor.',
                     icon: Icons.card_travel,
-                    color: Color.fromRGBO(0, 234, 150, 1),
+                    color: ColorConstants.BattleshipGray,
                     onPress: () {
                       Navigator.push(
                         context,
@@ -118,14 +110,14 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   SizedBox(
-                    height: 20,
+                    height: context.dynamicHeight(0.03),
                   ),
                   HomeListCard(
                     title: 'Şarkılara Sor',
                     description:
                         'Bilmek istediğin sorunun cevabı belki de şarkılarda yatıyor.',
                     icon: Icons.music_note,
-                    color: Color.fromRGBO(160, 91, 248, 1),
+                    color: ColorConstants.JazzBerryJam,
                     onPress: () {
                       Navigator.push(
                         context,
@@ -136,14 +128,14 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   SizedBox(
-                    height: 20,
+                    height: context.dynamicHeight(0.03),
                   ),
                   HomeListCard(
                     title: 'Gökyüzüne Sor',
                     description:
                         'Bilmek istediğin sorunun cevabı belki de gökyüzünde yatıyor.',
                     icon: Icons.cloud,
-                    color: Color.fromRGBO(42, 150, 251, 1),
+                    color: ColorConstants.Malibu,
                     onPress: () {
                       Navigator.push(
                         context,
