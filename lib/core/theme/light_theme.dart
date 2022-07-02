@@ -41,6 +41,13 @@ class LightTheme extends ITheme {
       color: ColorConstants.Zanah);
 
   @override
+  TextStyle get cardPickTextStyle => GoogleFonts.ubuntu(
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 0.15,
+      color: ColorConstants.SaltBox);
+
+  @override
   double deviceScreenScale({double scaleFactor, BuildContext context}) {
     throw UnimplementedError();
   }

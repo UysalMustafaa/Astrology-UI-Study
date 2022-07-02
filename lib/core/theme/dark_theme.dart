@@ -45,4 +45,8 @@ class DarkTheme extends ITheme {
   double deviceScreenScale({double scaleFactor, BuildContext context}) {
     throw UnimplementedError();
   }
+
+  @override
+  // TODO: implement cardPickTextStyle
+  TextStyle get cardPickTextStyle => throw UnimplementedError();
 }

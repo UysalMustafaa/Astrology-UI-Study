@@ -5,6 +5,7 @@ abstract class ITheme {
   ThemeData get data;
   final colors = ColorConstants();
   TextStyle get homePageHeaderTextStyle;
+  TextStyle get cardPickTextStyle;
   double deviceScreenScale(
       {@required double scaleFactor, @required BuildContext context});
   double textScaleFactorFromFontSize(
