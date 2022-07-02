@@ -32,16 +32,14 @@ class CustomPageScaffold extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Material(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Color.fromRGBO(244, 245, 251, 1),
                     child: InkWell(
                       borderRadius: BorderRadius.circular(12),
                       onTap: () {
                         Navigator.pop(context);
                       },
                       child: Container(
-                        height: 40,
-                        width: 50,
+                        height: context.dynamicHeight(0.05),
+                        width: context.dynamicWidth(0.1),
                         child: Center(
                           child: Icon(Icons.arrow_back_ios),
                         ),
@@ -71,47 +69,52 @@ class CustomPageScaffold extends StatelessWidget {
                   ),
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.only(top: 4),
+                      padding:
+                          EdgeInsets.only(top: context.dynamicHeight(0.005)),
                       decoration: BoxDecoration(
-                          color: this.pageColor,
+                          color: pageColor,
                           borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(32),
-                            topRight: Radius.circular(32),
+                            topLeft:
+                                Radius.circular(context.dynamicWidth(0.07)),
+                            topRight:
+                                Radius.circular(context.dynamicWidth(0.07)),
                           )),
                       child: Container(
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(32),
-                            topRight: Radius.circular(32),
+                            topLeft:
+                                Radius.circular(context.dynamicWidth(0.07)),
+                            topRight:
+                                Radius.circular(context.dynamicWidth(0.07)),
                           ),
                         ),
-                        padding: EdgeInsets.all(16),
+                        padding: EdgeInsets.all(context.dynamicHeight(0.02)),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
+                          children: [
                             Expanded(
                               child: SingleChildScrollView(
                                 padding: const EdgeInsets.symmetric(
                                     vertical: 24, horizontal: 16),
-                                child: this.body,
+                                child: body,
                               ),
                             ),
-                            this.hasButton
+                            hasButton
                                 ? Material(
                                     borderRadius: BorderRadius.circular(16),
-                                    color: this.pageColor,
+                                    color: pageColor,
                                     child: InkWell(
                                       borderRadius: BorderRadius.circular(16),
                                       onTap: () {
-                                        this.onButtonPressed();
+                                        onButtonPressed();
                                       },
                                       child: Container(
-                                        height: 54,
-                                        width: double.infinity,
+                                        height: context.dynamicHeight(0.07),
+                                        width: context.dynamicWidth(1),
                                         child: Center(
                                           child: Text(
-                                            '$buttonTitle',
+                                            buttonTitle,
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize: 18,
