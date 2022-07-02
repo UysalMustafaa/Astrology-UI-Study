@@ -1,3 +1,4 @@
+import 'package:astrology/core/constants/color_constants.dart';
 import 'package:astrology/core/widgets/custom_page_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,8 @@ class _QuestionPageState extends State<QuestionPage> {
           Navigator.pop(context);
         },
         onButtonPressed: () {},
-        pageColor: Color.fromRGBO(254, 87, 65, 1),
+        pageColor: ColorConstants.RedBerry,
+        hasButton: true,
       ),
     );
   }
