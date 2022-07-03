@@ -1,3 +1,4 @@
+import 'package:astrology/core/constants/color_constants.dart';
 import 'package:astrology/core/widgets/custom_page_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +50,7 @@ And tell me somethings last
             ),
           );
         },
-        pageColor: Color.fromRGBO(160, 91, 248, 1),
+        pageColor: ColorConstants.JazzBerryJam,
       ),
     );
   }

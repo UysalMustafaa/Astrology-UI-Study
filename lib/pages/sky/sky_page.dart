@@ -1,4 +1,6 @@
+import 'package:astrology/core/constants/color_constants.dart';
 import 'package:astrology/core/widgets/custom_page_scaffold.dart';
+import 'package:astrology/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class SkyPage extends StatelessWidget {
@@ -29,7 +31,7 @@ class SkyPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 16,
+              height: context.dynamicHeight(0.025),
             ),
             Row(
               children: <Widget>[
@@ -41,7 +43,7 @@ class SkyPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 16,
+              height: context.dynamicHeight(0.025),
             ),
             Row(
               children: <Widget>[
@@ -53,7 +55,7 @@ class SkyPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 16,
+              height: context.dynamicHeight(0.025),
             ),
             Row(
               children: <Widget>[
@@ -65,7 +67,7 @@ class SkyPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 16,
+              height: context.dynamicHeight(0.025),
             ),
             Row(
               children: <Widget>[
@@ -77,7 +79,7 @@ class SkyPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 16,
+              height: context.dynamicHeight(0.025),
             ),
             Row(
               children: <Widget>[
@@ -94,7 +96,7 @@ class SkyPage extends StatelessWidget {
           Navigator.pop(context);
         },
         onButtonPressed: () {},
-        pageColor: Color.fromRGBO(42, 150, 251, 1),
+        pageColor: ColorConstants.Malibu,
       ),
     );
   }
@@ -102,7 +104,7 @@ class SkyPage extends StatelessWidget {
   Widget _buildZodiacItem(String title) {
     return Material(
       elevation: 4,
-      shadowColor: Colors.black26,
+      shadowColor: ColorConstants.Black,
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         onTap: () {},
@@ -111,7 +113,7 @@ class SkyPage extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
           child: Center(
             child: Text(
-              '$title',
+              title,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
             ),
           ),
