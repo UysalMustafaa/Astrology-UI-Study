@@ -1,5 +1,6 @@
 import 'package:astrology/core/constants/color_constants.dart';
 import 'package:astrology/core/widgets/custom_page_scaffold.dart';
+import 'package:astrology/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class MusicSecond extends StatelessWidget {
@@ -36,8 +37,7 @@ Like an empty bottle takes the rain
 And heal, heal, hell, heal
 And tell me somethings last 
           ''',
-          style: TextStyle(fontSize: 16, height: 1.6),
-          textAlign: TextAlign.left,
+          style: context.appTheme().cardPickTextStyle,
         ),
         onBackPressed: () {
           Navigator.pop(context);
