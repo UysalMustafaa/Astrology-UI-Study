@@ -63,8 +63,8 @@ class _HomePageState extends State<HomePage> {
                   IconButton(
                     icon: Icon(
                       Icons.notification_important,
-                      size: 32,
-                      color: Color(0xFFffffff),
+                      size: context.dynamicHeight(0.05),
+                      color: ColorConstants.White,
                     ),
                     onPressed: () {},
                   ),
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Expanded(
                 child: SingleChildScrollView(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(context.dynamicWidth(0.05)),
               child: Column(
                 children: <Widget>[
                   HomeListCard(
