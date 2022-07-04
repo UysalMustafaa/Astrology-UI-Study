@@ -1,3 +1,4 @@
+import 'package:astrology/core/constants/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:astrology/core/extensions/context_extension.dart';
 
@@ -15,14 +16,12 @@ class HomeListCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
-      elevation: 4,
-      shadowColor: Colors.black12,
-      borderRadius: BorderRadius.circular(12),
+      color: ColorConstants.White,
+      borderRadius: BorderRadius.circular(context.dynamicWidth(0.05)),
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
         onTap: () {
-          this.onPress();
+          onPress();
         },
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 24),
@@ -38,31 +37,23 @@ class HomeListCard extends StatelessWidget {
                 width: 12,
               ),
               Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 2),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        '$title',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                          color: Color.fromRGBO(81, 83, 103, 1),
-                        ),
-                      ),
-                      Text(
-                        '$description',
-                        style:
-                            TextStyle(color: Color.fromRGBO(180, 184, 203, 1)),
-                      ),
-                    ],
-                  ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      title,
+                      style: context.appTheme().homeListCardTextStyle,
+                    ),
+                    Text(
+                      description,
+                      style:
+                          context.appTheme().homeListCardDescriptionTextStyle,
+                    ),
+                  ],
                 ),
               )
             ],
           ),
-          width: double.infinity,
         ),
       ),
     );
