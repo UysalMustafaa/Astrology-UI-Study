@@ -48,6 +48,27 @@ class LightTheme extends ITheme {
       color: ColorConstants.SaltBox);
 
   @override
+  TextStyle get homeListCardTextStyle => GoogleFonts.ubuntu(
+      fontSize: 18,
+      fontWeight: FontWeight.w700,
+      letterSpacing: 0.15,
+      color: ColorConstants.SaltBox);
+
+  @override
+  TextStyle get homeListCardDescriptionTextStyle => GoogleFonts.ubuntu(
+      fontSize: 14,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.15,
+      color: ColorConstants.OuterSpace);
+
+  @override
+  TextStyle get customCardTextStyle => GoogleFonts.ubuntu(
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 0.15,
+      color: ColorConstants.OuterSpace);
+
+  @override
   double deviceScreenScale({double scaleFactor, BuildContext context}) {
     throw UnimplementedError();
   }

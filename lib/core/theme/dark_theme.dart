@@ -47,6 +47,14 @@ class DarkTheme extends ITheme {
   }
 
   @override
-  // TODO: implement cardPickTextStyle
   TextStyle get cardPickTextStyle => throw UnimplementedError();
+
+  @override
+  TextStyle get homeListCardTextStyle => throw UnimplementedError();
+
+  @override
+  TextStyle get homeListCardDescriptionTextStyle => throw UnimplementedError();
+
+  @override
+  TextStyle get customCardTextStyle => throw UnimplementedError();
 }
