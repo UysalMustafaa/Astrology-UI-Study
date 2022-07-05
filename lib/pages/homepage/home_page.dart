@@ -1,6 +1,7 @@
 import 'package:astrology/core/constants/color_constants.dart';
 import 'package:astrology/core/widgets/custom_bottom_bar.dart';
 import 'package:astrology/core/widgets/home_list_card.dart';
+import 'package:astrology/pages/card_pick/card_pick_three.dart';
 import 'package:astrology/pages/question/question_page.dart';
 import 'package:astrology/core/extensions/context_extension.dart';
 import 'package:astrology/pages/sky/sky_page.dart';

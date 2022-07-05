@@ -20,49 +20,53 @@ class SkyPage extends StatelessWidget {
             sizedBoxItem(context),
             Row(
               children: <Widget>[
-                Expanded(child: CustomCard(title: 'Koç')),
+                Expanded(child: CustomCard(title: 'Koç', onPress: () {})),
                 sizedBoxItem(context),
-                Expanded(child: CustomCard(title: 'Boğa')),
+                Expanded(child: CustomCard(title: 'Boğa', onPress: () {})),
               ],
             ),
             sizedBoxItem(context),
             Row(
               children: <Widget>[
-                Expanded(child: CustomCard(title: 'İkizler')),
+                Expanded(child: CustomCard(title: 'İkizler', onPress: () {})),
                 sizedBoxItem(context),
-                Expanded(child: CustomCard(title: 'Yengeç')),
+                Expanded(child: CustomCard(title: 'Yengeç', onPress: () {})),
               ],
             ),
             sizedBoxItem(context),
             Row(
               children: <Widget>[
-                Expanded(child: CustomCard(title: 'Aslan')),
+                Expanded(child: CustomCard(title: 'Aslan', onPress: () {})),
                 sizedBoxItem(context),
-                Expanded(child: CustomCard(title: 'Başak')),
+                Expanded(child: CustomCard(title: 'Başak', onPress: () {})),
               ],
             ),
             sizedBoxItem(context),
             Row(
               children: <Widget>[
-                Expanded(child: CustomCard(title: 'Terazi')),
+                Expanded(child: CustomCard(title: 'Terazi', onPress: () {})),
                 sizedBoxItem(context),
-                Expanded(child: CustomCard(title: 'Akrep')),
+                Expanded(child: CustomCard(title: 'Akrep', onPress: () {})),
               ],
             ),
             sizedBoxItem(context),
             Row(
               children: <Widget>[
-                Expanded(child: CustomCard(title: 'Yay')),
+                Expanded(child: CustomCard(title: 'Yay', onPress: () {})),
                 sizedBoxItem(context),
-                Expanded(child: CustomCard(title: 'Oğlak')),
+                Expanded(child: CustomCard(title: 'Oğlak', onPress: () {})),
               ],
             ),
             sizedBoxItem(context),
             Row(
               children: <Widget>[
-                Expanded(child: CustomCard(title: 'Kova')),
+                Expanded(
+                    child: CustomCard(
+                  title: 'Kova',
+                  onPress: () {},
+                )),
                 sizedBoxItem(context),
-                Expanded(child: CustomCard(title: 'Balık')),
+                Expanded(child: CustomCard(title: 'Balık', onPress: () {})),
               ],
             ),
           ],
