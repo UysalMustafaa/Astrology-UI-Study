@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:astrology/core/extensions/context_extension.dart';
+import 'package:astrology/core/extensions/widget_extension.dart';
 
 class CustomPageScaffold extends StatelessWidget {
   final void Function() onBackPressed;
@@ -57,12 +58,12 @@ class CustomPageScaffold extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     child: Text(
-                      '$title',
+                      title,
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
-                    ),
+                    ).scaleScreen(context),
                   ),
                   SizedBox(
                     height: 16,

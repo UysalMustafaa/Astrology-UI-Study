@@ -1,4 +1,5 @@
 import 'package:astrology/core/constants/color_constants.dart';
+import 'package:astrology/core/extensions/context_extension.dart';
 import 'package:astrology/core/theme/ITheme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,7 +29,7 @@ class LightTheme extends ITheme {
     switch (fontSize?.toInt()) {
       default:
         {
-          return 0.0022;
+          return 0.0020;
         }
     }
   }
@@ -70,6 +71,6 @@ class LightTheme extends ITheme {
 
   @override
   double deviceScreenScale({double scaleFactor, BuildContext context}) {
-    throw UnimplementedError();
+    return context.dynamicWidth(scaleFactor);
   }
 }
